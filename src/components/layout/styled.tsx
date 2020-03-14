@@ -6,11 +6,13 @@ export const Header = styled.header`
   display: grid;
   justify-content: center;
   align-content: center;
-  background: #192a56;
+  background: #4452a8;
 `
+
+export const Image = styled.img``
 
 export const Main = styled.main`
   width: 100%;
   height: calc(100vh - 80px);
-  background: #dcdde1;
+  background: #ffffff;
 `

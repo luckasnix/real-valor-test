@@ -1,10 +1,13 @@
 import React, { ReactNode } from 'react'
-import { Header, Main } from './styled'
+import { Header, Image, Main } from './styled'
+import logo from '../../assets/images/logo.webp'
 
 export default ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <Header>Real Valor</Header>
+      <Header>
+        <Image src={logo} alt='Logo da Real Valor'/>
+      </Header>
       <Main>{children}</Main>
     </>
   )
