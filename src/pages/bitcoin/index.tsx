@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
-import { useHistory, useParams } from 'react-router-dom'
 import DataContent from '../../state/data/context'
 import * as dataActions from '../../state/data/actions'
 import Layout from '../../components/layout'
@@ -13,7 +13,6 @@ const apiKey: string = 'b4793d95abc2ed1a558d39b6f494dba677bfd638f4f52ad52ea43dd7
 
 export default () => {
   const history = useHistory()
-  const { asset } = useParams() // Ativo escolhido pelo usuário
   const { data, dispatchToData } = useContext(DataContent)
   // Formulário com o Formik e validação com o Yup
   const { getFieldProps, touched, errors, handleSubmit } = useFormik({
@@ -40,9 +39,7 @@ export default () => {
           return res.json()
         })
         .then(({ Data: { Data } }) => {
-          if (asset) {
-            dispatchToData(dataActions.addData(asset, values.investment, Data))
-          }          
+          dispatchToData(dataActions.addData('bitcoin', values.investment, Data))
         })
         .catch((err) => {
           console.log(err)

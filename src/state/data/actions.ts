@@ -1,9 +1,9 @@
 import * as dataTypes from './types'
 
 export const addData = (
-  asset: string,
+  asset: 'bitcoin' | 'treasure',
   investment: number,
-  data: [{
+  data?: [{
     time: number,
     close: number,
   }]

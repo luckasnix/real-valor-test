@@ -11,12 +11,12 @@ export default () => {
         <Title>Escolha um ativo para a simulação</Title>
         <List>
           <Item>
-            <Link to='/config/bitcoin'>
+            <Link to='/bitcoin'>
               <Bitcoin/>
             </Link>
           </Item>
           <Item>
-            <Link to='/config/treasure'>
+            <Link to='/treasure'>
               <Treasure/>
             </Link>
           </Item>
