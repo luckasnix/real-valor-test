@@ -1,10 +1,10 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useContext } from 'react'
+import DataContext from '../../state/data/context'
 import Layout from '../../components/layout'
 import { ResponsiveLine } from '@nivo/line'
 
 export default () => {
-  let { state: { data } } = useLocation()
+  const { data } = useContext(DataContext)
   return (
     <Layout>
       <ResponsiveLine
