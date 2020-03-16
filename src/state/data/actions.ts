@@ -3,7 +3,7 @@ import * as dataTypes from './types'
 export const addData = (
   asset: 'bitcoin' | 'treasure',
   investment: number,
-  data?: [{
+  data: [{
     time: number,
     close: number,
   }]
@@ -16,4 +16,8 @@ export const addData = (
       data,
     }
   }
+}
+
+export const removeData = {
+  type: dataTypes.REMOVE_DATA
 }

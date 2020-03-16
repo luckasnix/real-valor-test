@@ -30,17 +30,13 @@ export const Small = styled.small`
 `
 
 export const Button = styled.button`
-  width: 160px;
-  height: 40px;
-  display: grid;
-  justify-self: center;
-  justify-content: center;
-  align-content: center;
+  padding: 8px 24px;
   background: #e08701;
   border: none;
   border-radius: 8px;
   font-family: 'Baloo 2', cursive;
   font-size: 20px;
   color: #ffffff;
+  justify-self: center;
   cursor: pointer;
 `

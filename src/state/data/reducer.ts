@@ -34,5 +34,8 @@ export default (_: any, action: Action) => {
           data: chartData
         }]
       } else if (action.payload.asset === 'treasure') {}
+      break
+    case dataTypes.REMOVE_DATA:
+      return []
   }
 }
