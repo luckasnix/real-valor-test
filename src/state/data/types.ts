@@ -1,2 +1,3 @@
-export const ADD_DATA = 'ADD_DATA'
+export const ADD_BITCOIN_DATA = 'ADD_BITCOIN_DATA'
+export const ADD_TREASURE_DATA = 'ADD_TREASURE_DATA'
 export const REMOVE_DATA = 'REMOVE_DATA'

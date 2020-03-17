@@ -1,7 +1,6 @@
 import * as dataTypes from './types'
 
-export const addData = (
-  asset: 'bitcoin' | 'treasure',
+export const addBitcoinData = (
   investment: number,
   data: [{
     time: number,
@@ -9,11 +8,23 @@ export const addData = (
   }]
 ) => {
   return {
-    type: dataTypes.ADD_DATA,
+    type: dataTypes.ADD_BITCOIN_DATA,
     payload: {
-      asset,
       investment,
       data,
+    }
+  }
+}
+
+export const addTreasureData = (
+  investment: number,
+  period: number,
+) => {
+  return {
+    type: dataTypes.ADD_TREASURE_DATA,
+    payload: {
+      investment,
+      period,
     }
   }
 }

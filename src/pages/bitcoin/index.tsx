@@ -39,7 +39,7 @@ export default () => {
           return res.json()
         })
         .then(({ Data: { Data } }) => {
-          dispatchToData(dataActions.addData('bitcoin', values.investment, Data))
+          dispatchToData(dataActions.addBitcoinData(values.investment, Data))
         })
         .catch((err) => {
           console.log(err)
