@@ -33,8 +33,9 @@ export default (_: any, action: Action) => {
       }]
     case dataTypes.ADD_TREASURE_DATA:
       let treasureChartData: { x: string, y: string }[] = []
-      // Lógica aqui
+      // Laço FOR usando o índice para simular os meses
       for (let idx = 0; action.payload.period! >= idx; idx++) {
+        // Fórmula do juros composto
         let total = action.payload.investment * Math.pow(1 + 10 / 100, idx)
         treasureChartData.push({ x: idx.toString(), y: total.toFixed(2) })
       }
